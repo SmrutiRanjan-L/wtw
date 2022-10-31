@@ -1,0 +1,47 @@
+body{
+  background-color: yellow;
+}
+.heading1 {
+    color: blue;
+    font-family:monospace;
+    font-size: 300%;
+    text-align: center;  
+  }
+.heading2 {
+    color: blueviolet;
+    text-align: center;
+    font-family: serif;
+    font-weight: 250%;
+}
+.ContactUs {
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(56, 160, 155);
+  text-align: center;
+  font-size: large;
+}
+.details {
+    color: chartreuse;
+}
+a:link{
+  color: brown;
+}
+a:visited{
+  color: rgb(130, 191, 238);
+}
+a:hover{
+    color: seagreen;
+}
+html{
+    background-image: url(back.gif);
+}
+.more{
+  font-style: italic;
+  text-align: center;
+  background-color: rgb(255, 4, 4);
+  font-size: 2ex;
+  font-family: fantasy;
+  
+}
