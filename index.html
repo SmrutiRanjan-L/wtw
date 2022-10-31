@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>College Space</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg py-3 bg-dark navbar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand"><h3><b>College Space</b></h3></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                     
+                        <li class="nav-item p-1">
+                            <a href="#upcomingEvents" class="nav-link">
+                                Upcoming Events
+                            </a>
+                        </li>
+
+                        <li class="nav-item p-1">
+                            <a href="#subscriptionBoxes" class="nav-link">
+                                Subscribe
+                            </a>
+                        </li>
+
+                        <li class="nav-item p-1">
+                            <a href="#carouselExampleIndicators" class="nav-link">
+                                Pictures from prior events
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item p-1">
+                            <a href="#contactUs" class="nav-link">
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li class="nav-item p-1">
+                            <a href="login.html"><button type="button" class="btn btn-secondary">Admin Login</button></a>
+                        </li>
+
+                        <li class="nav-item p-1">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Committees
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">TSEC-MCL</a></li>
+                                <li><a class="dropdown-item" href="http://nss-tsec.50webs.com/faq.html" target="_blank">TSEC-NSS</a></li>
+                                <li><a class="dropdown-item" href="https://www.tseccodecell.com/" target="_blank">TSEC-CodeCell</a></li>
+                                <li><a class="dropdown-item" href="https://tseccodestorm.com/" target="_blank">TSEC-CodeStorm</a></li>
+                                <li><a class="dropdown-item" href="https://www.csitsec.in/" target="_blank">TSEC-CSI</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-Mobile App Developers</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-E-Cell</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-IEI</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-IETE</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-ISTE</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-Rotaract Club</a></li>
+                                <li><a class="dropdown-item" href="#">TSEC-Sports Committee</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>     
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+
+
+        <!-- Showcase -->
+        <section class="bg-dark text-light p-5 text-center">
+            <div class="container">
+                <div class="d-sm-flex">
+                    <div>
+                        <h1>A location to <span class="text-warning">keep up with all committee events</span></h1>
+                        <p class="lead">
+                            We provide a free newsletter to keep everyone informed about upcoming activities hosted by the college's committees.
+                        </p>
+                    </div>
+                    <img class="img-fluid" src="images/showcase.svg" width="50%">
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You modal -->
+        <div class="modal fade" id="Thanks-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">College Space</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                        <p>
+                            Thanks for signing up! Check your inbox to confirm and start receiving updates.
+                        </p>
+                    </div>
+                    <div class="modal-footer bg-dark py-3">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+            <section class="p-4 bg-primary" id="upcomingEvents">
+                <div class="container-fluid text-center content-row">
+                    <h2 class="text-center text-light">Upcoming Events</h2>
+                    <br>
+                    <div class="row g-4 row-lg-3">
+                        <div class="col-md-6 col-lg-4 col-sm-8">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Event Name</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">Date</h6>
+                                  <p class="card-text">(Description) Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                        </div>
+    
+                        <div class="col-md-6 col-lg-4 col-sm-8">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Event Name</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">Date</h6>
+                                  <p class="card-text">(Description) Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                        </div>
+    
+                        <div class="col-md-6 col-lg-4 col-sm-8">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Event Name</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">Date</h6>
+                                  <p class="card-text">(Description) Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+
+        <!-- Subscription Boxes -->
+        <section class="p-5 bg-dark" id="subscriptionBoxes">
+            <div class="container-fluid content-row">
+                <h2 class="text-white text-center">Subscribe to the newsletters</h2>
+                <br>
+                <div class="row g-4 row-lg-3">
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light" > 
+                            <div class="card-body h-100 d-flex flex-column text-center">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-MCL.png" class="img-fluid">
+                                </div>
+                                <h3 class="card-title mb-3">TSEC-MCL</h3>
+                                
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#MCL-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="MCL-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-MCL</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light ">
+                            <div class="card-body h-100 d-flex flex-column text-center">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-NSS.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-NSS</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NSS-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="NSS-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-NSS</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-CodeCell.png" class="img-fluid">
+                                </div>
+
+                                
+                                
+                                <h3 class="card-title mb-3">TSEC-CodeCell</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CodeCell-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="CodeCell-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-CodeCell</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body bg-dark text-light">
+                                                <p><b>TSEC CodeCell is a committee of Thadomal Shahani Engineering College which works towards nurturing interest and developing coding skills. They conduct various workshops and seminars for beginners, introducing them to various languages and algorithms, and for advanced coders, inculcating a regular coding habit to keep their programming skills sharp and helping students build their resume and expand their skill set.</b></p>
+                                                <br><br>
+                                                <b><span class="text-warning">To receive updates from this committee straight into your inbox, enter your email address and click the Subscribe button.</span></b>
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">    
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer bg-dark py-3">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100" > 
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-CodeStorm.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-CodeStorm</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CodeStorm-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="CodeStorm-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-CodeStorm</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-CSI.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-CSI</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CSI-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="CSI-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-CSI</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-MAD.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-Mobile App Developers</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#MAD-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="MAD-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-Mobile App Developers</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100" > 
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-E-Cell.png" class="img-fluid">
+                                </div>
+                                <h3 class="card-title mb-3">TSEC-E-Cell</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#E-Cell-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="E-Cell-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-E-Cell</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-IEI.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-IEI</h3>
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#IEI-modal">Subscribe</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="IEI-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-IEI</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-IETE.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-IETE</h3>
+            
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#IETE-modal">Subscribe</button>
+                                </div>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="IETE-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-IETE</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-Sports.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-Sports Committee</h3>
+            
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Sports-modal">Subscribe</button>
+                                </div>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="Sports-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-Sports Committee</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-ISTE.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-ISTE</h3>
+            
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ISTE-modal">Subscribe</button>
+                                </div>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="ISTE-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-ISTE</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="card bg-light h-100">
+                            <div class="card-body text-center h-100 d-flex flex-column">
+                                <div class="d-sm-flex">
+                                    <img src="images/TSEC-Rotaract.png" class="img-fluid">
+                                </div>
+                                
+                                <h3 class="card-title mb-3">TSEC-Rotaract Club</h3>
+            
+                                <div class="btn-group mt-auto" role="group" aria-label="Basic example">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rotaract-modal">Subscribe</button>
+                                </div>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="rotaract-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">TSEC-Rotaract Club</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                                                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Thanks-modal">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        
+        <div id="carouselExampleIndicators" class="carousel slide bg-primary p-5" data-bs-ride="carousel">
+            <h2 class="text-center text-light">Pictures from prior events</h2>
+            <br>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/event1.jpg" class="d-block mx-auto bg-dark" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/event2.jpg" class="d-block mx-auto bg-dark" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/event3.jpg" class="d-block mx-auto bg-dark" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <section class="bg-dark text-light p-5" id="contactUs">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="container">
+                <div class="d-sm-flex">
+                    <img class="img-fluid" src="images/contactUs.svg" width="50%">
+
+                    <!-- Wrapper container -->
+                    <div class="container py-4 bg-dark text-light">
+
+                        <!-- Bootstrap 5 starter form -->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    
+                        <!-- Name input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                        </div>
+                    
+                        <!-- Email address input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="emailAddress">Email Address</label>
+                            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                        </div>
+                    
+                        <!-- Message input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                        </div>
+                    
+                        <!-- Form submissions success message -->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">Form submission successful!</div>
+                        </div>
+                    
+                        <!-- Form submissions error message -->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                    
+                        <!-- Form submit button -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                        </div>
+                    
+                        </form>
+                    
+                    </div>
+                    <!-- SB Forms JS -->
+                    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>  
+                </div>
+            </div>
+            <br>
+            <h6 class="text-center text-light">Crafted with ❤️ for TSEC</h6>
+        </section>
+        
+    </body>
+</html>
